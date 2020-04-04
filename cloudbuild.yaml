@@ -2,5 +2,5 @@ steps:
 - id: go_version
   name: "gcr.io/cloud-builders/go"
   args: ["version"]
-#  env: ["GOPATH=."]
+  env: ["GOPATH=."]
     
