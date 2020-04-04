@@ -7,7 +7,7 @@ steps:
   name: 'golang'
   args: ['go','test']
 
-- id: mostrando diretorio
+- id: mostrando arquivo
   name: "golang"
   args: ['ls']
 
