@@ -13,11 +13,11 @@ steps:
   - '-t'
   - 'gcr.io/$PROJECT_ID/DesafioCI:latest'
   - '-t'
-  - 'gcr.io/$PROJECT_ID/DesafioCI:1.24.0'
+  - 'gcr.io/$PROJECT_ID/DesafioCI:1.0.0'
   - '.'
 - name: 'gcr.io/$PROJECT_ID/DesafioCI'
   args: ['version']
         
-    images:
+images:
 - 'gcr.io/$PROJECT_ID/DesafioCI:latest'
 - 'gcr.io/$PROJECT_ID/DesafioCI:1.0.0'
