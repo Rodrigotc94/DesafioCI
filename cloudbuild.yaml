@@ -6,5 +6,5 @@ steps:
 
 # - id: Gerando Imagem
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','--build-args','version=1','-t','gcr.io/$PROJECT_ID/desafioCI','.']
-images: ['gcr.io/$PROJECT_ID/desafioCI:latest','gcr.io/$PROJECT_ID/desafioCI:1']
+  args: ['build','--build-args','version=latest','-t','gcr.io/$PROJECT_ID/desafioCI','.']
+images: ['gcr.io/$PROJECT_ID/desafioCI:latest']
