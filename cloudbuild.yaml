@@ -1,23 +1,15 @@
 steps:
+
+- id: "go test"
+  name: 'gcr.io/cloud-builders/go'
+  args: ['test']
+  env: ["GOPATH=."]
     
-- id: go_test
-  name: 'golang'
-  args: ['go','test']
-    
-    #Gerar imagem 
 - name: 'gcr.io/cloud-builders/docker'
   args:
   - 'build'
-  - '--build-arg'
-  - 'version=1.0.0'
   - '-t'
-  - 'gcr.io/$PROJECT_ID/DesafioCI:latest'
-  - '-t'
-  - 'gcr.io/$PROJECT_ID/DesafioCI:1.0.0'
+  - 'gcr.io/$PROJECT_ID/desafio-ci:latest'
   - '.'
-- name: 'gcr.io/$PROJECT_ID/DesafioCI'
-  args: ['version']
-        
 images:
-- 'gcr.io/$PROJECT_ID/DesafioCI:latest'
-- 'gcr.io/$PROJECT_ID/DesafioCI:1.0.0'
+- 'gcr.io/$PROJECT_ID/desafio-ci:latest'
