@@ -4,7 +4,20 @@ steps:
   name: 'golang'
   args: ['go','test']
 
-# - id: Gerando Imagem
+  #Gerar imagem 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','--build-args','version=latest','-t','gcr.io/$PROJECT_ID/desafioCI','.']
-images: ['gcr.io/$PROJECT_ID/desafioCI:latest']
+  args:
+    - 'build'
+    - '--build-arg'
+    - 'version=1.0.0'
+    - '-t'
+    - 'gcr.io/$PROJECT_ID/DesafioCI:latest'
+    - '-t'
+    - 'gcr.io/$PROJECT_ID/DesafioCI:1.24.0'
+    - '.'
+- name: 'gcr.io/$PROJECT_ID/DesafioCI'
+  args: ['version']
+    
+images:
+- 'gcr.io/$PROJECT_ID/DesafioCI:latest'
+- 'gcr.io/$PROJECT_ID/DesafioCI:1.24.0'
