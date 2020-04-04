@@ -2,8 +2,12 @@ steps:
 - id: go_version
   name: 'golang'
   args: ['go','version']
-#   env: ['GOPATH=.']
 
-# - id: go_test
-#   nome: 'gcr.io/cloud-builders/go'
-#   args: ['test']
+- id: go_test
+  nome: 'golang'
+  args: ['go','test']
+
+- id: mostrando diretorio
+  name: "golang"
+  args: ['pwd']
+
