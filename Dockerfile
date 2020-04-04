@@ -1,5 +1,4 @@
 FROM golang:alpine
-RUN apk add bash
 
 ADD . /go/src/DesafioCI
 
