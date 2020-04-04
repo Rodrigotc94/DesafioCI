@@ -1,9 +1,9 @@
 steps:
 - id: go_version
-  name: "gcr.io/cloud-builders/go"
+  name: 'golang'
   args: ['go','version']
-  env: ["GOPATH=."]
+  env: ['GOPATH=.']
 
-- id: go_test
-  name: "gcr.io/cloud-builders/go"
-  args: ['go','test']
+# - id: go_test
+#   nome: 'gcr.io/cloud-builders/go'
+#   args: ['test']
