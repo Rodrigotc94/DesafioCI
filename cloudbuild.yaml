@@ -9,5 +9,8 @@ steps:
 
 - id: mostrando diretorio
   name: "golang"
-  args: ['pwd']
+  args: ['ls']
 
+- id: mostrando diretorio
+  name: "golang"
+  args: ['pwd']
