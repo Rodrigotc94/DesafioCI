@@ -5,6 +5,5 @@ steps:
   env: ["GOPATH=."]
 
 - id: go_test
-  nome: "gcr,io/cloud-builders/go"
+  name: "gcr,io/cloud-builders/go"
   args: ["go", "test"]
-  
