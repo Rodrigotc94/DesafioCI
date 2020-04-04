@@ -4,7 +4,7 @@ steps:
   args: ['go','version']
 
 - id: go_test
-  nome: 'golang'
+  name: 'golang'
   args: ['go','test']
 
 - id: mostrando diretorio
